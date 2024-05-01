@@ -1,0 +1,168 @@
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	
+	font-family: Nunito;
+	color: white;
+	background-color: rgb(192, 84, 105);
+	transition: 3s background-color;
+
+	width: 100vw;
+}
+
+#main {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+
+	margin: auto;
+	margin-top: 200px;
+	padding: 50px;
+
+	background-color: rgb(218, 119, 139);
+
+	transition: 3s background-color;
+
+	width: 500px;
+}
+
+#main__time {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 100px;
+	font-weight: bold;
+	letter-spacing: 5px;
+}
+
+#main__time > * {
+	margin: 0;
+}
+
+#minutes, #seconds {
+	-moz-appearance: textfield;
+	appearance: textfield;
+
+	font-family: Nunito;
+	font-size: 100px;
+	font-weight: bold;
+
+	color: white;
+	background-color: transparent;
+	padding: 0;
+
+	width: fit-content;
+	border: none;
+	outline: none;
+}
+
+#minutes {
+	text-align: right;
+}
+
+#main__time__edit {
+	display: none;
+}
+
+#main__buttons {
+	display: flex;
+	flex-direction: row;
+	gap: 25px;
+
+	justify-content: center;
+	align-items: center;
+
+	height: 50px;
+	width: 100%;
+}
+
+#main__buttons > div {
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+
+	padding: 15px;
+
+	background-color: white;
+	border-radius: 15px;
+
+	height: 100%;
+	aspect-ratio: 1/1;
+}
+
+#main__buttons > div:hover {
+	filter: brightness(90%);
+	cursor: pointer;
+}
+
+#tasks {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+#new-task, #clear-tasks {
+	color: rgb(218, 119, 139);
+	background-color: white;
+	border-radius: 15px;
+
+	opacity: 0.8;
+
+	padding: 10px;
+	width: 200px;
+
+	cursor: pointer;
+	user-select: none;
+}
+
+hr {
+	border: 1px solid white;
+	margin: 25px 0;
+}
+
+.task {
+	display: flex;
+	flex-direction: row;
+	gap: 25px;
+
+	align-items: center;
+
+	color: rgb(218, 119, 139);
+	background-color: white;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+.task-button {
+	border: 10px solid rgb(218, 119, 139);
+	border-radius: 50%;
+
+	padding: 10px;
+	cursor: pointer;
+}
+
+.task-text {
+	border: none;
+	outline: none;
+	width: 100%;
+
+	padding: 5px;
+}
+
+.task-text:focus {
+	background-color: #ddd;
+}
+
+.task-button:hover {
+	filter: brightness(90%);
+}
+
+.task-text {
+	font-family: monospace;
+	font-size: 15px;
+}
