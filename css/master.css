@@ -1,3 +1,7 @@
+:root {
+	--timer-font: Nunito;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
@@ -5,11 +9,21 @@ body {
 	align-content: center;
 	
 	font-family: Nunito;
-	color: white;
-	background-color: rgb(192, 84, 105);
+
+	color: var(--fg);
+	background-color: var(--background);
 	transition: 3s background-color;
 
 	width: 100vw;
+}
+
+#style {
+	border: none;
+	border-radius: 15px;
+
+	width: 300px;
+	padding: 10px 15px;
+	cursor: pointer;
 }
 
 #main {
@@ -21,7 +35,9 @@ body {
 	margin-top: 200px;
 	padding: 50px;
 
-	background-color: rgb(218, 119, 139);
+	background-color: var(--main);
+	box-shadow: 0 0 25px #0002;
+	border-radius: 50px;
 
 	transition: 3s background-color;
 
@@ -41,17 +57,22 @@ body {
 
 #main__time > * {
 	margin: 0;
+
+	font-family: serif;
+	font-size: 100px;
+	font-weight: bold;
+}
+
+#colon {
+	color: var(--fg);
+	transition: 0.5s opacity;
 }
 
 #minutes, #seconds {
 	-moz-appearance: textfield;
 	appearance: textfield;
 
-	font-family: Nunito;
-	font-size: 100px;
-	font-weight: bold;
-
-	color: white;
+	color: var(--fg);
 	background-color: transparent;
 	padding: 0;
 
@@ -62,10 +83,6 @@ body {
 
 #minutes {
 	text-align: right;
-}
-
-#main__time__edit {
-	display: none;
 }
 
 #main__buttons {
@@ -88,16 +105,22 @@ body {
 
 	padding: 15px;
 
-	background-color: white;
+	transition: 3s background-color;
+	background-color: var(--start-button);
 	border-radius: 15px;
 
+	width: 100px;
 	height: 100%;
 	aspect-ratio: 1/1;
 }
 
 #main__buttons > div:hover {
-	filter: brightness(90%);
+	filter: brightness(95%);
 	cursor: pointer;
+}
+
+#main__buttons > div > img {
+	filter: var(--start-button-filter);
 }
 
 #tasks {
@@ -107,8 +130,9 @@ body {
 }
 
 #new-task, #clear-tasks {
-	color: rgb(218, 119, 139);
-	background-color: white;
+	color: var(--task-button-fg);
+	background-color: var(--task-button);
+	font-weight: bold;
 	border-radius: 15px;
 
 	opacity: 0.8;
@@ -121,7 +145,7 @@ body {
 }
 
 hr {
-	border: 1px solid white;
+	border: 1px solid var(--fg);
 	margin: 25px 0;
 }
 
@@ -132,14 +156,13 @@ hr {
 
 	align-items: center;
 
-	color: rgb(218, 119, 139);
-	background-color: white;
+	background-color: var(--task-bg);
 	border-radius: 15px;
 	padding: 10px;
 }
 
 .task-button {
-	border: 10px solid rgb(218, 119, 139);
+	border: 5px solid var(--task-fg);
 	border-radius: 50%;
 
 	padding: 10px;
@@ -147,11 +170,16 @@ hr {
 }
 
 .task-text {
+	font-family: monospace;
+	font-size: 15px;
+
+	color: var(--task-fg);
+	background: transparent;
 	border: none;
 	outline: none;
-	width: 100%;
 
 	padding: 5px;
+	width: 100%;
 }
 
 .task-text:focus {
@@ -160,9 +188,4 @@ hr {
 
 .task-button:hover {
 	filter: brightness(90%);
-}
-
-.task-text {
-	font-family: monospace;
-	font-size: 15px;
 }
