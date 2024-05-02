@@ -33,7 +33,7 @@ body {
 	gap: 50px;
 
 	margin: auto;
-	margin-top: 200px;
+	margin-top: 150px;
 	padding: 50px;
 
 	background-color: var(--main);
@@ -191,6 +191,7 @@ hr {
 @media only screen and (max-width: 900px) {
 	#main {
 		width: 90%;
+		margin-top: 50px;
 	}
 
 	#style {
