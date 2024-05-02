@@ -62,11 +62,11 @@ btnStart.addEventListener("click", (event) => {
         timerIsRunning = false;
         setTimeText(timeMinutes, timeSeconds);
         clearInterval(timeInterval);
-        btnStart.children[0].src = "/res/play-fill.svg";
+        btnStart.children[0].src = "res/play-fill.svg";
         styleDefault();
     } else {
         styleRunning();
-        btnStart.children[0].src = "/res/pause-fill.svg";
+        btnStart.children[0].src = "res/pause-fill.svg";
         timerIsRunning = true;
         t0 = Date.now();
         let timerLengthSeconds = timeMinutes * 60 + timeSeconds;
@@ -77,7 +77,7 @@ btnStart.addEventListener("click", (event) => {
                 
                 // Play chime
                 let audio = document.createElement("audio");
-                audio.src = "/res/done.mp3";
+                audio.src = "res/done.mp3";
                 audio.autoplay = true;
 
                 // Reset timer
@@ -85,7 +85,7 @@ btnStart.addEventListener("click", (event) => {
 
                 timerIsRunning = false;
 
-                btnStart.children[0].src = "/res/play-fill.svg";
+                btnStart.children[0].src = "res/play-fill.svg";
                 styleDefault();
 
                 clearInterval(timeInterval);
