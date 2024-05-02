@@ -71,8 +71,6 @@ Object.keys(styles).forEach((s) => {
     document.getElementById("style").appendChild(opt);
 });
 
-document.getElementById("style").value = "contrast";
-
 function changeStyle(style, i) {
     Object.keys(style).forEach((s) => {
         let sss = style[s][i];
