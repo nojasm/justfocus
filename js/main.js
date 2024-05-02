@@ -68,7 +68,7 @@ let styles = {
             "--start-button": ["#cb99d9"],
             "--start-button-filter": ["invert(1.0)", "invert(0.8)"],
             "--task-bg": ["#cb99d9"],
-            "--task-fg": ["#cb99d9"]
+            "--task-fg": ["white"]
         }
     }
 }
