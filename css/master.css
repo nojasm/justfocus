@@ -25,6 +25,7 @@ body {
 	width: 300px;
 	padding: 10px 15px;
 	cursor: pointer;
+	margin: 10px;
 }
 
 #main {

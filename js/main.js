@@ -56,6 +56,20 @@ let styles = {
             "--task-bg": ["#bbb"],
             "--task-fg": ["#333"]
         }
+    },
+    "daisy": {
+        name: "🌼",
+        style: {
+            "--background": ["#ffd", "#ddb"],
+            "--main": ["#f0f051", "#ff3"],
+            "--fg": ["#cb99d9"],
+            "--task-button": ["#cb99d9"],
+            "--task-button-fg": ["white"],
+            "--start-button": ["#cb99d9"],
+            "--start-button-filter": ["invert(1.0)", "invert(0.8)"],
+            "--task-bg": ["#cb99d9"],
+            "--task-fg": ["#cb99d9"]
+        }
     }
 }
 
@@ -70,6 +84,8 @@ Object.keys(styles).forEach((s) => {
     opt.innerText = styles[s].name;
     document.getElementById("style").appendChild(opt);
 });
+
+document.getElementById("style").value = "daisy";
 
 function changeStyle(style, i) {
     Object.keys(style).forEach((s) => {
