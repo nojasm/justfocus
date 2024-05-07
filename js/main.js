@@ -68,21 +68,15 @@ let styles = {
             "--start-button": ["#cb99d9"],
             "--start-button-filter": ["invert(1.0)", "invert(0.8)"],
             "--task-bg": ["#cb99d9"],
-<<<<<<< HEAD
-            "--task-fg": ["#cb99d9"]
-=======
             "--task-fg": ["white"]
->>>>>>> 8d8738ff84763d07195d9f539b24c96e455a4426
         }
     }
 }
 
-<<<<<<< HEAD
 document.getElementById("style").addEventListener("change", (event) => {
     if (timerIsRunning) styleRunning();
     else styleDefault();
 })
-=======
 let sounds = {"default": "Default (based on theme)", "retro": "Retro", "flower": "Flower"};
 
 let presets = [
@@ -128,7 +122,6 @@ document.getElementById("style").addEventListener("change", (event) => {
     if (timerIsRunning) styleRunning();
     else styleDefault();
 });
->>>>>>> 8d8738ff84763d07195d9f539b24c96e455a4426
 
 Object.keys(styles).forEach((s) => {
     let opt = document.createElement("option");
@@ -137,9 +130,8 @@ Object.keys(styles).forEach((s) => {
     document.getElementById("style").appendChild(opt);
 });
 
-<<<<<<< HEAD
 document.getElementById("style").value = "daisy";
-=======
+
 /**
  * SOUNDS
  */
@@ -171,7 +163,6 @@ Object.keys(sounds).forEach((sound) => {
     opt.innerText = sounds[sound];
     document.getElementById("sound").appendChild(opt);
 });
->>>>>>> 8d8738ff84763d07195d9f539b24c96e455a4426
 
 function changeStyle(style, i) {
     Object.keys(style).forEach((s) => {
@@ -181,13 +172,10 @@ function changeStyle(style, i) {
     });
 }
 
-<<<<<<< HEAD
-=======
 // Load default style and sound from local storage
 document.getElementById("style").value = localStorage.getItem("style") || "contrast";
 document.getElementById("sound").value = localStorage.getItem("sound") || "default";
 
->>>>>>> 8d8738ff84763d07195d9f539b24c96e455a4426
 timeMinutesEl.addEventListener("change", (event) => {
     timeMinutes = parseInt(event.target.value);
 
@@ -225,10 +213,7 @@ function styleDefault() {
 }
 
 styleDefault();
-<<<<<<< HEAD
 
-=======
->>>>>>> 8d8738ff84763d07195d9f539b24c96e455a4426
 setTimeText(timeMinutes, timeSeconds);
 
 // Prepare audio chime when timer ends
