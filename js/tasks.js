@@ -28,15 +28,16 @@ function addTask(text, localStorageID) {
         // Find in local storage
         let lst = getTasksFromLocalStorage();
         lst.forEach((e) => {
-            console.log(e.id, "==", event.target.parentElement.getAttribute("lsid"));
             if (e.id == event.target.parentElement.getAttribute("lsid")) {
                 e.text = elText.value;
                 return;
             }
         });
-        console.log(lst);
         setTasksInLocalStorage(lst);
     });
+
+    elText.onfocus = () => {isAnyFocussed = true};
+    elText.onblur = () => {isAnyFocussed = false};
 
     elBtn.addEventListener("click", (event) => {
         if (el.style.opacity == 0.5) {

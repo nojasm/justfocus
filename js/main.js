@@ -15,6 +15,8 @@ let t0 = null;
 
 let timeInterval = null;
 
+var isAnyFocussed = false;  // Is any task input text focussed / currently being edited?
+
 let styles = {
     "retro": {
         name: "Retro",
@@ -269,7 +271,7 @@ btnStart.addEventListener("click", (event) => {
 });
 
 window.addEventListener("keydown", (event) => {
-    if (event.code == "Space") {
+    if (event.code == "Space" && !isAnyFocussed) {
         btnStart.click();
     }
 });
