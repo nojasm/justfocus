@@ -76,6 +76,9 @@ function addTask(text, localStorageID) {
 
 document.getElementById("new-task").addEventListener("click", (event) => {
     addTask("empty task", crypto.randomUUID());
+    let list = document.getElementsByClassName("task-text");
+    list[list.length - 1].focus();
+    list[list.length - 1].select();
 });
 
 document.getElementById("clear-tasks").addEventListener("click", (event) => {
