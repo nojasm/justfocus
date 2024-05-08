@@ -272,6 +272,9 @@ hr {
 
 	padding: 5px;
 	width: 100%;
+
+	resize: none;
+	height: auto;
 }
 
 .task-button:hover {

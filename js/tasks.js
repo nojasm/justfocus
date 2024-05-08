@@ -21,7 +21,7 @@ function addTask(text, localStorageID) {
     let elBtn = document.createElement("div");
     elBtn.classList.add("task-button");
 
-    let elText = document.createElement("input");
+    let elText = document.createElement("textarea");
     elText.classList.add("task-text");
     elText.value = text;
     elText.addEventListener("change", (event) => {
@@ -34,6 +34,11 @@ function addTask(text, localStorageID) {
             }
         });
         setTasksInLocalStorage(lst);
+    });
+
+    elText.addEventListener("input", (event) => {
+        event.target.style.height = "auto";
+        event.target.style.height = (event.target.scrollHeight) + "px";
     });
 
     elText.onfocus = () => {isAnyFocussed = true};
@@ -84,4 +89,9 @@ let localTasks = structuredClone(getTasksFromLocalStorage());
 setTasksInLocalStorage([]);
 localTasks.forEach((t) => {
     if (!t.done) addTask(t.text, t.id);
+});
+
+[...document.getElementsByClassName("task-text")].forEach((tt) => {
+    tt.style.height = "auto";
+    tt.style.height = (tt.scrollHeight) + "px";
 });
