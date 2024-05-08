@@ -8,11 +8,26 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<select id="style"></select>
+		<div id="top">
+			<div class="top__col">
+				<p>Theme</p>
+				<select id="style"></select>
+			</div>
+			<div class="top__col">
+				<p>Sound</p>
+				<select id="sound"></select>
+			</div>
+			<span></span>
+			<a href="https://github.com/nojasm/justfocus"><p id="title">
+				JUSTFOCUS
+			</p></a>
+		</div>
 
 		<div id="main">
+			<div id="main__presets"></div>
 			<div id="main__time">
 				<input id="minutes" type="number" min="0" max="180"></input>
 				<div id="colon">:</div>
