@@ -220,7 +220,7 @@ setTimeText(timeMinutes, timeSeconds);
 
 // Prepare audio chime when timer ends
 var doneAudio = document.createElement("audio");
-doneAudio.src = "res/done.mp3";
+doneAudio.src = "/res/sounds/default.mp3";
 
 btnStart.addEventListener("click", (event) => {
     if (timerIsRunning) {
