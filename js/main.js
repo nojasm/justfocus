@@ -151,11 +151,11 @@ document.getElementById("sound").addEventListener("change", (event) => {
     if (event.target.value == "default") {
         // Find sound based on current theme
         let theme = document.getElementById("style").value;
-        if (theme in LUT) doneAudio.src = "/res/sounds/" + LUT[theme];
-        else doneAudio.src = "/res/sounds/default.mp3";
+        if (theme in LUT) doneAudio.src = "res/sounds/" + LUT[theme];
+        else doneAudio.src = "res/sounds/default.mp3";
     } else {
         // Find sound based on selection
-        doneAudio.src = "/res/sounds/" + event.target.value + ".mp3";
+        doneAudio.src = "res/sounds/" + event.target.value + ".mp3";
     }
 });
 
@@ -220,7 +220,7 @@ setTimeText(timeMinutes, timeSeconds);
 
 // Prepare audio chime when timer ends
 var doneAudio = document.createElement("audio");
-doneAudio.src = "/res/sounds/default.mp3";
+doneAudio.src = "res/sounds/default.mp3";
 
 btnStart.addEventListener("click", (event) => {
     if (timerIsRunning) {
